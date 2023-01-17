@@ -13,16 +13,17 @@ body {
     height: 100%;
     position: relative;
     margin:0px;
+    
 }
 
 .button {
-    background-color: red; 
+    background-color: rgb(255, 183, 0); 
     color: black; 
     border: 2px solid #f44336;
 }
   
 .button:hover {
-    background-color: #f44336;
+    background-color: #ff1100;
     color: white;
 }
   
@@ -42,7 +43,7 @@ a {
 }
 
 .nav-pills > li > a.active {
-    background-color: #e73f3f !important;
+    background-color: #ff0000 !important;
 }
 
 a:hover { color : red;}
@@ -71,7 +72,7 @@ input[type=text]:focus, input[type=password]:focus {
 }
 
 .top-container {
-    background: #ccc;
+    background: rgb(0, 0, 0);
     padding:5px;
     border-bottom:2px solid #0f0f0f;
 }
@@ -84,7 +85,7 @@ input[type=text]:focus, input[type=password]:focus {
 }
 
 .container-term {
-    width:80%;
+    /* width:80%; */
     margin-left: auto;
     margin-right: auto;
     text-align: left;

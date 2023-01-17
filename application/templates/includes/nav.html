@@ -3,17 +3,12 @@
         <nav>
             <ul class="nav nav-pills red">
                 <li class="nav-item"><a href="{{ url_for('videocatalog') }}" class="nav-link {% if videocatalog %} active {% endif %}">Home</a></li>
-                <li class="nav-item"><a href="{{ url_for('recommendation') }}" class="nav-link {% if recom %} active {% endif %}">Recommendations</a></li>
+                <li class="nav-item"><a href="{{ url_for('recommendation') }}" class="nav-link {% if recommendation %} active {% endif %}">Recommendations</a></li>
                 <li class="nav-item"><a href="{{ url_for('membership') }}" class="nav-link {% if membership %} active {% endif %}">Membership</a></li>
                 <li class="nav-item"><a href="{{ url_for('register') }}" class="nav-link {% if register %} active {% endif %}">Register</a></li>
                 <li class="nav-item"><a href="{{ url_for('login') }}" class="nav-link {% if login %} active {% endif %}">Login</a></li>
             </ul>
         </nav>
         <hr style="clear:both">
-        <!-- <div class="sidenav">
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#clients">Clients</a>
-            <a href="#contact">Contact</a>
-        </div> -->
+    
     </header>

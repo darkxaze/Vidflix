@@ -1,16 +1,13 @@
     {% extends "layout.html" %}
     
     {% block content %}
-    <h1>Video catalog</h1>
-
-    <h3>data from "http://34.142.32.93/myflix/videos"</h3>
     <div>
         <table class="table table-hover">
             <thead>
             <tr>
                 <th scope="col">Thumbnail</th>
                 <th scope="col">Title</th>
-                <th scope="col">Description</th>
+                <th scope="col">Genres</th>
                 <th scope="col">Duration</th>
                 <th scope="col">Play</th>
             </tr>
@@ -21,7 +18,7 @@
             <tr>
                 <td scope='row'><img src="http://34.118.113.149/pics/{{ data['thumbnail'] }}" width="170" height="120"></td>
                 <td>{{ data["title"] }}</td>
-                <td>{{ data["description"] }}</td>
+                <td>{{ data["Genres"] }}</td>
                 <td>{{ data["duration"] }}</td>
                 <td>
                     <form action="{{url_for('vid1')}}" method="GET">

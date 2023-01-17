@@ -57,15 +57,15 @@ def recommendation():
                 recommended_movies_names = recommend(movies_name)
                 status = True
 
-                return render_template("recommend.html", movies_name = recommended_movies_names, movie_list = movie_list, status = status)
+                return render_template("recommend.html", movies_name = recommended_movies_names, movie_list = movie_list, status = status, recommendation=True)
 
 
         except Exception as e:
             error = {'error': e}
-            return render_template("recommend.html",error = error, movie_list = movie_list, status = status)
+            return render_template("recommend.html",error = error, movie_list = movie_list, status = status,recommendation=True)
 
     else:
-        return render_template("recommend.html", movie_list = movie_list, status = status)
+        return render_template("recommend.html", movie_list = movie_list, status = status,recommendation=True)
 
 @app.route('/payment', methods=['POST'])
 def payment():
@@ -113,11 +113,11 @@ def execute():
 
 @app.route("/membership",methods=["GET","POST"]) # 
 def membership():
-    return render_template("membership.html")
+    return render_template("membership.html",membership=True)
 
 @app.route("/login") # 
 def login():
-    return render_template("login.html", login=True)
+     return render_template("login.html", login=True)
 
 @app.route("/register") # 
 def register():

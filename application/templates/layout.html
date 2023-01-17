@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>MyFlix - Home Page</title>
+    <title>Vidflix</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
@@ -9,10 +9,10 @@
 <body>
 
 <div class="container-fluid text-center top-container">
-    <img src="{{ url_for('static', filename='images/netflix-logo-banner-768x435.jpg')}}">
+    <img src="{{ url_for('static', filename='images/netflix-logo-black-bg-banner.jpg')}}">
 </div>
 
-<div class="container">
+<div class="container" style="background-color: #747474; ">
     
     {% include "includes/nav.html" %}
 

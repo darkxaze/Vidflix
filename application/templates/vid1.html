@@ -1,13 +1,9 @@
     {% extends "layout.html" %}
    
     {% block content %}
-    
-    <h1>Video storing and streaming from NGINX</h1>
     <h5>src="http://34.118.113.149/pics/{{ data.title }}"</h5>
     <div class="row">
         <div class="col-md-12 text-center">
-            <h1>You are watching:</h1>
-            <h2>{{ data.title }}</h2>
             <video controls autoplay>
                 <source src="http://34.118.113.149/pics/{{ data.title }}" type="video/mp4">
             </video>
