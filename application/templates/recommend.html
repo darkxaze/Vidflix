@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<section class="text-gray-600 body-font -my-8">
+    <div class="row text-center">
+        <div class="col-md-3"></div>
+        <div class="center col-md-6">
+          <form action="/recommendation" method="POST">
+            <select class="form-select" id="movies" name="movies" aria-label="Default select example">
+              {% for j in movie_list %}
+              <option value="{{j}}">{{j}}</option>
+              {% endfor %}
+              
+            </select><br>
+            <button type="submit" class="btn btn-success">Submit</button>
+          </form>
+        </div>
+      </div>
+</section>
+
+{% if status %}
+
+<div class="col text-center">
+    <h2>The recommended movies are</h2>
+    <table id = "t" style="border:1px solid black;margin-left:auto;margin-right:auto;">
+        <tr>
+          <th>Index</th>
+          <th>Movie Title</th>
+        </tr>
+          <ul>
+              {% for i in range(10) %}
+                  <tr>
+                      <td>{{ loop.index }}</td>
+                      <td>{{movies_name[i]}}</td>
+                  </tr>
+              {% endfor %}
+          </ul>
+      </table>
+
+    
+    <!-- <ol>
+        <li>{{movies_name[0]}}</li>
+        <li>{{movies_name[1]}}</li>
+        <li>{{movies_name[2]}}</li>
+        <li>{{movies_name[3]}}</li>
+        <li>{{movies_name[4]}}</li>
+        <li>{{movies_name[5]}}</li>
+        <li>{{movies_name[6]}}</li>
+        <li>{{movies_name[7]}}</li>
+        <li>{{movies_name[8]}}</li>
+        <li>{{movies_name[9]}}</li>  
+      </ol>   -->
+</div>
+
+
+
+
+{% endif %}
+
+{% endblock %}

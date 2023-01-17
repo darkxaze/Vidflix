@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h1>Welcome to MyFlix!.</h1>
+            {% if login %}
+            <h3>Here I'm, using NGINX Open Source for Video Streaming.</h3>
+            {% else %}
+            <p><a href="{{ url_for('login') }}">Login</a></p>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}

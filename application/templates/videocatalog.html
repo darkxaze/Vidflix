@@ -1,0 +1,82 @@
+    {% extends "layout.html" %}
+    
+    {% block content %}
+    <h1>Video catalog</h1>
+
+    <h3>data from "http://34.142.32.93/myflix/videos"</h3>
+    <div>
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <th scope="col">Thumbnail</th>
+                <th scope="col">Title</th>
+                <th scope="col">Description</th>
+                <th scope="col">Duration</th>
+                <th scope="col">Play</th>
+            </tr>
+            </thead>
+            <tbody>
+
+            {% for data in data2 %}
+            <tr>
+                <td scope='row'><img src="http://34.118.113.149/pics/{{ data['thumbnail'] }}" width="170" height="120"></td>
+                <td>{{ data["title"] }}</td>
+                <td>{{ data["description"] }}</td>
+                <td>{{ data["duration"] }}</td>
+                <td>
+                    <form action="{{url_for('vid1')}}" method="GET">
+                        <input type="hidden" name="title" value="{{data['title']}}">
+                        <input type="hidden" name="thumbnail" value="{{data['thumbnail']}}">
+                    <button class="button">Play</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+
+            </tbody>
+        </table>
+    </div>
+
+    <!-- <h3>data from "mongodb://localhost:27017/"</h3>
+    <div>
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <th scope="col">Episode</th>
+                <th scope="col">Title</th>
+                <th scope="col">Description</th>
+                <th scope="col">Duration</th>
+                <th scope="col">thumbnail</th>
+                <th scope="col">Play</th>
+            </tr>
+            </thead>
+            <tbody>
+
+            {% for data in videodata %}
+            <tr>
+                <td scope='row'>{{ data["episode"] }}</td>
+                <td>{{ data["title"] }}</td>
+                <td>{{ data["description"] }}</td>
+                <td>{{ data["duration"] }}</td>
+                <td>{{ data["thumbnail"] }}</td>
+                <td>
+                    <img src="http://34.105.179.114/pics/{{ data['thumbnail'] }}" width="150" height="100">
+                </td>
+                <td>
+                    <form action="{{url_for('vid1')}}" method="GET">
+                        <input type="hidden" name="title" value="{{data['title']}}">
+                        <input type="hidden" name="thumbnail" value="{{data['thumbnail']}}">
+                    <button class="button">Play</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+
+            </tbody>
+        </table>
+    </div> -->
+
+{% endblock %}
+
+<!-- <img src="{{ url_for('static', filename=data['thumbnail']) }}" width="150" height="100"> -->
+<!-- <td><img src="{{ url_for('static', filename='images/000 Popeye the Sailor (7-14-1933)_000453.JPG')}}" width="100" height="50"></td> -->

@@ -1,0 +1,22 @@
+    {% extends "layout.html" %}
+   
+    {% block content %}
+    
+    <h1>Video storing and streaming from NGINX</h1>
+    <h5>src="http://34.118.113.149/pics/{{ data.title }}"</h5>
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h1>You are watching:</h1>
+            <h2>{{ data.title }}</h2>
+            <video controls autoplay>
+                <source src="http://34.118.113.149/pics/{{ data.title }}" type="video/mp4">
+            </video>
+        </div>
+    </div>
+
+    {% endblock %}
+
+<!-- <video controls autoplay> -->
+    <!-- <source src="{{ url_for('static', filename='000 Popeye the Sailor (7-14-1933).mp4')}}" type="video/mp4"> -->
+    <!-- <source src="{{ url_for('static', filename=data.title)}}" type="video/mp4">
+</video> -->
